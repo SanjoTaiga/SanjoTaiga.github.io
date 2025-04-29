@@ -1,0 +1,283 @@
+/* ベース設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* ヒーローエリア全体 */
+.hero {
+  padding: 1rem 0; /* 上下余白を小さく */
+  position: relative;
+}
+
+/* セクションブロック全体 */
+.block {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* 各見出し */
+.block h2 {
+  font-size: 1.8rem;
+  color: #006666;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.block h3 {
+  font-size: 1.2rem;
+  color: #007777;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.block p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* 特徴セクションの特徴項目グループ */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 各特徴のブロック */
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* 角丸画像とテキスト配置 */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  max-width: 1200px; /* 画像の最大幅を拡大 */
+  margin: 0 auto;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vertical-text {
+  writing-mode: vertical-rl;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* メニューリスト（横並び） */
+.menu-box {
+  max-width: 1200px;
+  margin: 0.5rem auto 0;
+  padding: 0 1rem;
+}
+.menu-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  list-style: none;
+}
+.menu-box li {
+  font-size: 0.95rem;
+  color: #006666;
+  white-space: nowrap;
+}
+
+.menu-box a {
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-box a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* コンテンツセクション */
+.content {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.intro h2 {
+  font-size: 1.8rem;
+  color: #006666;
+  margin-bottom: 1rem;
+}
+.intro p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* 丸画像 */
+.circle-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* 特徴テキスト */
+.feature-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .feature {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .circle-image {
+    width: 100px;
+    height: 100px;
+  }
+  .block h2 {
+    font-size: 1.5rem;
+  }
+  .block h3 {
+    font-size: 1rem;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #009999;
+}
+.step {
+  background: #f0fafa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  font-weight: bold;
+  color: #004c4c;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chat-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.chat-row.user {
+  flex-direction: row;
+}
+
+.chat-row.staff {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.chat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  background-color: #f0f0f0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.chat-row.staff .chat-bubble {
+  background-color: #dff6f4;
+  color: #003333;
+}
+
+
+.answer-bubble {
+  background-color: #e0f7fa;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  max-width: 70%;
+  text-align: left;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#info {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#info .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+#info .border {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.access-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.access-text {
+  flex: 1 1 300px;
+}
+
+.access-map {
+  flex: 1 1 300px;
+}
+
+@media (max-width: 768px) {
+  .access-container {
+    flex-direction: column;
+  }
+}
