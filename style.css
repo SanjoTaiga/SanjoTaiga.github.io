@@ -88,10 +88,18 @@ body {
   transform: translate(-50%, -50%);
 }
 .vertical-text {
-  writing-mode: vertical-rl;
-  font-size: 1.5rem;
-  color: white;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .hero-image {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .vertical-text {
+    font-size: 1.6rem;
+  }
 }
 
 /* メニューリスト（横並び） */
@@ -289,6 +297,7 @@ body {
 
 /* ハンバーガーボタン */
 .menu-toggle {
+  color: #006666;
   position: fixed;
   top: 10px;
   right: 15px;
@@ -297,7 +306,7 @@ body {
   font-size: 2rem;
   z-index: 1000;
   display: none;
-  padding: 1rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 8px;
   cursor: pointer;
 }
