@@ -6,6 +6,15 @@
   <title>希望の光</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.ico" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="hero">
@@ -14,40 +23,46 @@
       <div class="hero-text">
         <p class="vertical-text">一生の<br>お付き合いを目指した<br>リハビリ施設</p>
       </div>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
     </div>
-    <div class="menu-box">
+
+    <nav id="mobile-menu" class="mobile-menu">
       <ul>
-        <li><a href="#intro">当施設の紹介</a></li>
-        <li><a href="#features">当施設の特徴</a></li>
+        <li><a href="#intro">当院の紹介</a></li>
+        <li><a href="#features">当院の特徴</a></li>
         <li><a href="#flow">ご利用までの流れ</a></li>
         <li><a href="#casher">営業時間・ご利用料金</a></li>
         <li><a href="#QandA">Q＆A</a></li>
-        <li><a href="https://forms.gle/XXXXXX" target="_blank" rel="noopener noreferrer">予約フォーム</a></li>
-        <li><a href="#profile">院長のプロフィール</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd5WZLVdSZrHNdRQzy_E5hArOa2YFL1vHPXyFFXZYgcdrmFxQ/viewform" target="_blank" rel="noopener noreferrer">予約フォーム</a></li>
+        <li><a href="#philosophy">当院の理念</a></li>
+        <li><a href="#profile">院長プロフィール</a></li>
         <li><a href="#access">住所・アクセス</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <main class="content">
     <section class="block intro" id="intro">
-      <h2>当施設の紹介</h2>
+      <h2>当院の紹介</h2>
       <p>
-        当施設は、お客様とそのご家族様との一生のお付き合いを目指して立ち上げました。<br>
-        脳卒中やその他神経系の病気をきっかけに手足に後遺症がある方や、<br>
+        当院は、お客様とそのご家族様との一生のお付き合いを目指して立ち上げました。<br>
+        脳卒中やその他神経系の病気をきっかけに手足に後遺症がある方や加齢に伴って、<br>
         活動性が低下した方、立つ歩く動作などが不安定になってきてしまった方、<br>
-        または身体の衰えを予防したい方を対象に、リハビリを提供する施設です。
+        身体の衰えを予防したい方、痛みや職業特有の身体の悩みがある方などを対象に、<br>
+        完全自費対応でのリハビリを提供する院です。
       </p>
       <h3>一生のお付き合いができるリハビリ施設を目指した理由</h3>
       <p>
-        ご病気をきっかけに一時的に病院や施設でリハビリを行い、在宅復帰を果たす方は多数いらっしゃると思います。<br>
+        ご病気をきっかけに一時的に病院や施設でリハビリを行い、<br>
+        在宅復帰を果たす方は多数いらっしゃると思います。<br>
+        しかし、リハビリはそこでおわりではありません。<br>
         在宅に戻れてうれしい反面、今後の生活において不安を抱く方も多いのではと考えています。<br>
-        そのように今後の生活に不安を頂いている方に対して一生涯の支援をしたいという思いから、当施設を立ち上げました。
+        そのように今後の生活に不安を頂いている方に対して一生涯の支援をしたいという思いから、当院を立ち上げました。
       </p>
     </section>
 
     <section class="block features" id="features">
-      <h2>当施設の特徴</h2>
+      <h2>当院の特徴</h2>
       <div class="feature">
         <img src="images/feature1.png" alt="個別リハビリの様子" class="circle-image">
         <div>
@@ -82,19 +97,19 @@
     <section class="block flow" id="flow">
       <h2>ご利用までの流れ</h2>
       <p>
-        当施設では無料にてリハビリ体験を行っています。<br>
-        当施設のリハビリの方向性とお客様のご意向がマッチしているかお客様に見極めていただくことが目的です。<br>
-        その後、ご利用に同意となりましたら予約を取り、お客様の当施設でのリハビリがスタートとなります。<br>
+        当院では無料にてリハビリ体験を行っています。<br>
+        当院のリハビリの方向性とお客様のご意向がマッチしているかお客様に見極めていただくことが目的です。<br>
+        その後、ご利用に同意となりましたら予約を取り、お客様の当院でのリハビリがスタートとなります。<br>
       </p>
         <div class="steps">
-          <div class="step">① お問い合わせ（フォーム or お電話）<br>※希望時間を3つご記入ください</div>
-          <div class="step">② 当施設より日時をご連絡</div>
-          <div class="step">③ 見学・カウンセリング・体験</div>
-          <div class="step">④ ご利用内容に同意</div>
-          <div class="step">⑤ ご予約 → ご利用開始</div>
+          <div class="step">① お問い合わせ（フォーム or お電話）<br>希望の日時の候補の記載を3つお願いします。　</div>
+          <div class="step">② 当院から詳しい日時を返信させて頂きます。</div>
+          <div class="step">③ 当院の見学、カウンセリング、リハビリ体験</div>
+          <div class="step">④ 当院のリハビリの方向性に同意</div>
+          <div class="step">⑤ 次回の予約を取り、ご利用開始</div>
         </div>
     </section>
-    
+
 
     <section id="info" class="p-6 bg-white rounded-lg shadow space-y-4">
       <h2 class="text-xl font-bold mb-4">営業時間・ご利用料金</h2>
@@ -102,20 +117,20 @@
       <div class="grid md:grid-cols-2 gap-4">
         <div class="p-4 border rounded-lg bg-gray-50 shadow">
           <h3 class="text-lg font-semibold mb-2">営業時間</h3>
-          <p>平日：9:00～20:00</p>
-          <p>土曜：9:00～20:00</p>
-          <p>定休日：日曜・祝日</p>
+          <p>平日：8:00～12:00、19:00～22:00</p>
+          <p>土日：8:00～20:30</p>
+          <p>定休日：毎週水曜日</p>
         </div>
-    
+
         <div class="p-4 border rounded-lg bg-gray-50 shadow">
           <h3 class="text-lg font-semibold mb-2">ご利用料金</h3>
           <p>初回体験：無料</p>
-          <p>1回あたり：5,500円（税込）</p>
+          <p>1回あたり：5,500円（税込み）</p>
           <p>所要時間：1時間程度</p>
         </div>
       </div>
     </section>
-    
+
 
     <section class="block QandA" id="QandA">
       <h2>Q＆A</h2>
@@ -126,7 +141,7 @@
       </div>
       <div class="chat-row staff">
         <img src="images/staff1.png" alt="回答者" class="chat-icon" />
-        <div class="answer-bubble">当院は施設見学、無料のリハビリ体験をし、<br>お客様に納得して頂いてからのご利用スタートになります。</div>
+        <div class="answer-bubble">当院は施設見学、無料のリハビリ体験をし、<br>お客様に納得して頂いてからのご利用スタートになります。<br>下記よりお問い合わせください。<br>・フォーム<br>・お電話</div>
       </div>
       <div class="chat">
         <div class="chat-row user">
@@ -135,7 +150,7 @@
       </div>
       <div class="chat-row staff">
         <img src="images/staff1.png" alt="回答者" class="chat-icon" />
-        <div class="answer-bubble">脳卒中やその他神経系の病気をきっかけに手足に後遺症がある方や加齢に伴って、<br>活動性が低下した方、立つ歩く動作などが不安定になってきてしまった方、<br>または身体の衰えを予防したい方を対象にしています。</div>
+        <div class="answer-bubble">脳卒中やその他神経系の病気をきっかけに手足に後遺症がある方や加齢に伴って、<br>活動性が低下した方、立つ歩く動作などが不安定になってきてしまった方、<br>身体の衰えを予防したい方、痛みや職業特有の身体の悩みがある方を対象にしています。</div>
       </div>
       <div class="chat">
         <div class="chat-row user">
@@ -148,7 +163,7 @@
       </div>
     </section>
     
-    <section id="access" class="p-6 bg-white rounded-lg shadow space-y-4">
+    <section id="access" class="block p-6 bg-white rounded-lg shadow space-y-4">
       <h2 class="text-xl font-bold mb-4">住所・アクセス</h2>
       <div class="grid md:grid-cols-2 gap-4">
         <div class="p-4 border rounded-lg bg-gray-50 shadow">
@@ -174,6 +189,43 @@
         ></iframe>
       </div>
     </section>
+
+    <section class="block philosophy" id="philosophy">
+      <h2>当院の理念</h2>
+      <p>
+        １ 当院の施術、リハビリ（運動療法）を通して、お客様の幸せな人生に貢献します。<br>
+           また、お客様とそのご家族様との一生涯のお付き合いを目指した治療院を目指します。<br>
+        ２ いつも笑い声にあふれているリハビリ治療院で在り続けます。<br>
+        ３ お客様に対して真心を込めて接し、丁寧な説明、丁寧な運動指導、丁寧な施術を心掛けていきます。
+      </p>
+    </section>
+
+    <section class="block profile" id="profile">
+      <h2>院長プロフィール</h2>
+      <p>
+        坂庭　徹<br>
+        群馬県太田市出身。<br>
+        理学療法士として、過去に総合病院、介護福祉施設、訪問リハビリに従事し、リハビリ職としてキャリアを積んできました。<br>
+        特に在宅での生活復帰を支援することが多く、そうした経験をする中で、大事なのは「退院後の生活をいかに充実させるかだ」と強く感じるようになりました。<br>
+        ご病気によって後遺症がある方でも、リハビリを通して可能性を引き出し、前向きに希望をもって生活してもらいたいという思いから、当院を立ち上げました。
+      </p>
+      
+      <h3>当院が目指す方向性について</h3>
+      <p>
+        当院のリハビリの方向性を一言で表すと「骨格を上手に扱えるようになる」ことを目指しています。<br>
+        違う表現をすると、「部分では全体を使えるようになる」ことを目指しています。<br>
+        そうすることで、立つ、歩くなどの基本的な動作やスポーツ動作に変化をもたらせてくれると考えています。<br>
+        そのためのポイントは３つあります。<br>
+        ・身体の力みをなくす<br>
+        ・足裏を感じる<br>
+        ・深く落ちついて呼吸する<br>
+        です。<br>
+        身体の余分な力みが消え、深く呼吸できると、たくさん身体には良いことが起きます。<br>
+        ただ、やはり言葉では伝わりきれない部分があると考えているため、まずは無料体験にて直接当院の目指す方向性を体感を伴ってご理解をして頂ければ幸いです。<br>
+      </p>
+    </section>
+
+
 
   </main>
 </body>
