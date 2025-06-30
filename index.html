@@ -10,8 +10,17 @@
     document.addEventListener("DOMContentLoaded", () => {
       const menuToggle = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
+
+      // メニューボタンの開閉
       menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("open");
+      });
+
+      // メニュー内のリンクをクリックしたら閉じる
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+        });
       });
     });
   </script>
