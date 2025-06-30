@@ -297,7 +297,7 @@ body {
   font-size: 2rem;
   z-index: 1000;
   display: none;
-  padding: 0.5rem 1.1rem;
+  padding: 1rem 1rem;
   border-radius: 8px;
   cursor: pointer;
 }
