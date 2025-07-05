@@ -164,9 +164,9 @@ body {
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .hero-text {
-    font-size: 1.2rem; /* モバイルでは少し小さく */
-    top: 50%;
-    left: 50%;
+    font-size: 1.0rem; /* モバイルでは少し小さく */
+    top: 70%;
+    left: 70%;
     transform: translate(-50%, -50%);
   }
   .feature {
