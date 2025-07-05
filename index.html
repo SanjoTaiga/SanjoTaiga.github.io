@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>希望の光</title>
+  <title>自費リハビリ整体院希望の光</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.ico" />
   <script>
@@ -13,6 +13,12 @@
       const overlay = document.createElement("div");
       overlay.className = "menu-overlay";
       document.body.appendChild(overlay);
+
+      document.querySelectorAll('.toggle-step').forEach(step => {
+        step.addEventListener('click', () => {
+          step.classList.toggle('open');
+        });
+      });
 
       const closeMenu = () => {
         mobileMenu.classList.remove("open");
@@ -39,7 +45,8 @@
 <body>
   <header class="hero">
     <div class="hero-wrapper">
-      <img src="images/hero.jpg" alt="メイン画像" class="hero-image" />
+      <span class="clinic-name">自費リハビリ整体院希望の光</span>
+      <img src="images/hero.png" alt="メイン画像" class="hero-image" />
       <div class="hero-text">
         <p class="vertical-text">一生の<br>お付き合いを目指した<br>リハビリ施設</p>
       </div>
@@ -140,15 +147,46 @@
         <div class="steps">
           <div class="step">① お問い合わせ（フォーム or お電話）<br>希望の日時の候補の記載を3つお願いします。　</div>
           <div class="step">② 当院から詳しい日時を返信させて頂きます。</div>
-          <div class="step">③ 当院の見学、カウンセリング、リハビリ体験</div>
+          <div class="step toggle-step">③ 当院の見学、カウンセリング、リハビリ体験 （※クリックすると、詳細が表示されます。）</div>
+            <div class="step-detail">
+              <p><strong>１. 問診</strong></p>
+              <div class="step-image-row">
+                <img src="images/assessment1.png" alt="問診の様子1" class="step-image" />
+              </div>
+              <p>まずは現在のお身体の不調や痛みなどで悩まれていることを聞かせて頂きます。<br>また、生活上や仕事上で悩まれている場合は、実際の動作を確認させて頂きます。</p>
+              <p>（例：歩行動作、重たいものを持つ動作、家族の介助をする動作など）</p>
+              <p><strong>２、姿勢・動きの評価</strong></p>
+              <img src="images/posture.png" alt="姿勢評価の様子" class="step-image" />
+              <p>姿勢や動きを評価し、痛みの原因などを分析させて頂きます。<br>
+                 お一人お一人個別性があり、身体の癖をみることで改善する方向を探していきます。<br>
+                 また、その都度身体の使い方のアドバイスもさせて頂きます。</p>
+              <p><strong>３、当院のリハビリの方向性について説明</strong></p>
+              <div class="step-image-row">
+                <img src="images/explanation1.png" alt="説明の様子" class="step-image" />
+                <img src="images/explanation2.png" alt="説明の様子" class="step-image" />
+              </div>
+              <p>一通り評価を行った後、当院のリハビリの方向性について説明させて頂きます。<br>
+                お客様に納得感を持ってもらった方が、確実に良い方向に導いていけると考えているため、十分に説明させて頂きます。</p>
+              <p><strong>４、施術・運動療法の実施</strong></p>
+              <img src="images/treatment1.png" alt="施術の様子" class="step-image" />
+              <img src="images/treatment2.png" alt="施術の様子" class="step-image" />
+              <p>評価結果をもとに、お一人お一人に合ったプログラムを提案させて頂きます。<br>
+                  お客様と一緒に効果を話し合いながら進められるため、楽しみながら行っていきます(^^♪</p>
+              <p><strong>５、効果の確認、自主練習の指導</strong></p>
+              <img src="images/homework1.png" alt="自主練習の様子" class="step-image" />
+              <img src="images/homework2.png" alt="自主練習の様子" class="step-image" />
+              <p>リハビリ実施後の効果の確認をします。<br>
+                  ご家庭でも行えるものがあれば、自主練習として指導させて頂きます。<br>
+                  当院のリハビリと自主的なリハビリが合わさることで、さらに良い効果が生まれるため、自主練習も大切なのです。</p>
+            </div>
           <div class="step">④ 当院のリハビリの方向性に同意</div>
           <div class="step">⑤ 次回の予約を取り、ご利用開始</div>
         </div>
     </section>
 
 
-    <section id="casher" class="p-6 bg-white rounded-lg shadow space-y-4">
-      <h2 class="text-xl font-bold mb-4">営業時間・ご利用料金</h2>
+    <section id="casher" class="block p-6 bg-white rounded-lg shadow space-y-4">
+      <h2>営業時間・ご利用料金</h2>
     
       <div class="grid md:grid-cols-2 gap-4">
         <div class="p-4 border rounded-lg bg-gray-50 shadow">
@@ -187,15 +225,6 @@
         <img src="images/staff1.png" alt="回答者" class="chat-icon" />
         <div class="answer-bubble">脳卒中やその他神経系の病気をきっかけに手足に後遺症がある方や加齢に伴って、<br>活動性が低下した方、立つ歩く動作などが不安定になってきてしまった方、<br>身体の衰えを予防したい方、痛みや職業特有の身体の悩みがある方を対象にしています。</div>
       </div>
-      <div class="chat">
-        <div class="chat-row user">
-        <img src="images/user1.png" alt="質問者" class="chat-icon" />
-        <div class="chat-bubble">もし利用となったらどれくらいの頻度で通えばいいの？</div>
-      </div>
-      <div class="chat-row staff">
-        <img src="images/staff1.png" alt="回答者" class="chat-icon" />
-        <div class="answer-bubble">お客様のご希望、将来なりたい理想に合わせて頻度は設定致します。<br>そのため、よりお客様の理想が高い場合は、通う頻度を多くするという提案をさせて頂きます。<br>反対に理想に近付いてきたら、徐々に頻度を落としていくようなイメージです。</div>
-      </div>
     </section>
     
     <section id="access" class="block p-6 bg-white rounded-lg shadow space-y-4">
@@ -205,12 +234,6 @@
           <h3 class="text-lg font-semibold mb-2">住所</h3>
           <p>〒326-0824 群馬県足利市八幡町２丁目２５ー１</p>
           <p>半日型デイサービスはっちネクスト様隣接テナント</p>
-        </div>
-    
-        <div class="p-4 border rounded-lg bg-gray-50 shadow">
-          <h3 class="text-lg font-semibold mb-2">アクセス</h3>
-          <p>○○駅から車で5分</p>
-          <p>△△バス停から徒歩5分</p>
         </div>
       </div>
       <div style="width: 100%; height: 400px; margin-top: 1em;">
@@ -226,6 +249,23 @@
       </div>
     </section>
 
+
+    <section class="block profile" id="profile">
+    <h2>院長プロフィール</h2>
+      <div class="profile-container">
+        <img src="images/profile.png" alt="院長の写真" class="profile-image">
+          <div class="profile-text">
+            <p>
+              坂庭　徹<br>
+              群馬県太田市出身。<br>
+              理学療法士として、過去に総合病院、介護福祉施設、訪問リハビリに従事し、リハビリ職としてキャリアを積んできました。<br>
+              特に在宅での生活復帰を支援することが多く、そうした経験をする中で、大事なのは「退院後の生活をいかに充実させるかだ」と強く感じるようになりました。<br>
+              ご病気によって後遺症がある方でも、リハビリを通して可能性を引き出し、前向きに希望をもって生活してもらいたいという思いから、当院を立ち上げました。
+            </p>
+        </div>
+    </div>
+
+    
     <section class="block philosophy" id="philosophy">
       <h2>当院の理念</h2>
       <p>
@@ -235,16 +275,6 @@
         ３ お客様に対して真心を込めて接し、丁寧な説明、丁寧な運動指導、丁寧な施術を心掛けていきます。
       </p>
     </section>
-
-    <section class="block profile" id="profile">
-      <h2>院長プロフィール</h2>
-      <p>
-        坂庭　徹<br>
-        群馬県太田市出身。<br>
-        理学療法士として、過去に総合病院、介護福祉施設、訪問リハビリに従事し、リハビリ職としてキャリアを積んできました。<br>
-        特に在宅での生活復帰を支援することが多く、そうした経験をする中で、大事なのは「退院後の生活をいかに充実させるかだ」と強く感じるようになりました。<br>
-        ご病気によって後遺症がある方でも、リハビリを通して可能性を引き出し、前向きに希望をもって生活してもらいたいという思いから、当院を立ち上げました。
-      </p>
       
       <h3>当院が目指す方向性について</h3>
       <p>

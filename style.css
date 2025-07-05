@@ -86,6 +86,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .vertical-text {
   writing-mode: vertical-rl;
@@ -158,6 +163,12 @@ body {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
+  .hero-text {
+    font-size: 1.2rem; /* モバイルでは少し小さく */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .feature {
     flex-direction: column;
     align-items: flex-start;
@@ -373,4 +384,80 @@ body {
 }
 .menu-overlay.active {
   display: block;
+}
+.step.toggle-step {
+  cursor: pointer;
+  position: relative;
+}
+
+.step-detail {
+  display: none;
+  font-weight: normal;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.step.toggle-step.open .step-detail {
+  display: block;
+}
+
+.step.toggle-step::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: #007777;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.step.toggle-step.open::after {
+  transform: rotate(180deg);
+}
+
+/* 最初は非表示 */
+.step-detail {
+  display: none;
+  margin-left: 1.5em;
+  padding: 0.5em;
+  background-color: #f3f4f6;
+  border-left: 3px solid #60a5fa;
+}
+
+/* .toggle-step が open クラスを持っているとき、直後の .step-detail を表示 */
+.toggle-step.open + .step-detail {
+  display: block;
+}
+.step-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 1em 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.clinic-name {
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #25bd85;
+}
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 240px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 260px;
 }
