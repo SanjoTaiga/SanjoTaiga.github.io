@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>自費リハビリ整体院希望の光</title>
+  <meta name="description" content="群馬県足利市の自費リハビリ整体院 希望の光は、国家資格保有者による個別リハビリをご提供。無料体験も実施中。">
+  <meta property="og:title" content="自費リハビリ整体院 希望の光">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="国家資格者による個別リハビリで安心。足利市で無料体験受付中。">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.ico" />
   <script>
@@ -39,19 +43,72 @@
       });
 
       overlay.addEventListener("click", closeMenu);
-    });
+
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".slider .slide");
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove("active");
+          if (i === index) {
+            slide.classList.add("active");
+          }
+        });
+      }
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, 4000); // 4秒ごとに切り替え
+      });
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "自費リハビリ整体院 希望の光",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "足利市",
+        "addressRegion": "群馬県",
+        "postalCode": "326-0824",
+        "streetAddress": "八幡町2丁目25-1"
+      }
+    }
+    </script>
 </head>
 <body>
   <header class="hero">
-    <div class="hero-wrapper">
-      <span class="clinic-name">自費リハビリ整体院希望の光</span>
-      <img src="images/hero.png" alt="メイン画像" class="hero-image" />
-      <div class="hero-text">
-        <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
-      </div>
+    <div class="hero-container">
+    <span class="clinic-name">自費リハビリ整体院希望の光</span>
+      <div class="hero-wrapper slider">
+        <!-- スライド画像 -->
+        <div class="slide active">
+          <img src="images/hero1.jpg" alt="群馬県足利市 自費リハビリ整体院 施設風景" class="hero-image" />
+          <div class="hero-text">
+            <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/hero2.jpg" alt="施設風景2" class="hero-image" />
+          <div class="hero-text">
+            <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/hero3.jpg" alt="施設風景3" class="hero-image" />
+          <div class="hero-text">
+            <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
+          </div>
+        </div>
+      <!-- ナビゲーションボタン -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- ハンバーガーメニュー -->
       <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="メニューを開く">☰</button>
     </div>
+  </div>
 
     <!-- PC用メニュー -->
     <div class="menu-box">

@@ -16,7 +16,11 @@ body {
   padding: 1rem 0; /* 上下余白を小さく */
   position: relative;
 }
-
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 /* セクションブロック全体 */
 .block {
   padding: 2rem 1rem;
@@ -444,6 +448,7 @@ body {
   font-weight: bold;
   color: #25bd85;
 }
+
 .profile-container {
   display: flex;
   flex-direction: row;
@@ -462,4 +467,55 @@ body {
 .profile-text {
   flex: 1;
   min-width: 260px;
+}
+/* スライド全体 */
+.slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* スライド領域の高さを固定：比率は任意（4:3 も可） */
+  overflow: hidden;
+}
+
+/* 各スライドの共通スタイル */
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+  pointer-events: none; /* 非アクティブスライドのクリック無効 */
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* ナビゲーションボタン（左右矢印） */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
 }
