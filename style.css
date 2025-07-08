@@ -84,6 +84,9 @@ body {
     margin: 0;
     border-radius: 0;
   }
+  .vertical-text {
+    font-size: 0.9rem;
+  }
 }
 .hero-text {
   position: absolute;

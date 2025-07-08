@@ -56,6 +56,19 @@
         });
       }
 
+      const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      };
+
+      const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      };
+
+      document.querySelector('.next').addEventListener('click', nextSlide);
+      document.querySelector('.prev').addEventListener('click', prevSlide);
+
       setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
@@ -80,23 +93,29 @@
 <body>
   <header class="hero">
     <div class="hero-container">
-    <span class="clinic-name">自費リハビリ整体院希望の光</span>
+    <span class="clinic-name">自費リハビリ整体院　希望の光</span>
       <div class="hero-wrapper slider">
         <!-- スライド画像 -->
         <div class="slide active">
-          <img src="images/hero1.jpg" alt="群馬県足利市 自費リハビリ整体院 施設風景" class="hero-image" />
+          <img src="images/hero1.png" alt="群馬県足利市 自費リハビリ整体院 施設風景" class="hero-image" />
           <div class="hero-text">
             <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
           </div>
         </div>
         <div class="slide">
-          <img src="images/hero2.jpg" alt="施設風景2" class="hero-image" />
+          <img src="images/hero2.png" alt="群馬県足利市 自費リハビリ整体院 施設風景2" class="hero-image" />
           <div class="hero-text">
             <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
           </div>
         </div>
         <div class="slide">
-          <img src="images/hero3.jpg" alt="施設風景3" class="hero-image" />
+          <img src="images/hero3.png" alt="群馬県足利市 自費リハビリ整体院 施設風景3" class="hero-image" />
+          <div class="hero-text">
+            <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/hero4.png" alt="群馬県足利市 自費リハビリ整体院 施設風景4" class="hero-image" />
           <div class="hero-text">
             <p class="vertical-text">一生の<br>お付き合いを<br>目指した<br>リハビリ施設</p>
           </div>
