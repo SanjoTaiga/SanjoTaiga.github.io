@@ -379,6 +379,9 @@ body {
     .menu-box {
       display: none;
     }
+    .clinic-name {
+      font-size: 1.0rem;
+    }
   }
 }
 .menu-overlay {
